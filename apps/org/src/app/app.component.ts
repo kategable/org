@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { NxWelcomeComponent } from './nx-welcome.component';
+import { HomeComponent } from './home/home.component';
 
 @Component({
   standalone: true,
-  imports: [NxWelcomeComponent],
+  imports: [HomeComponent],
   selector: 'org-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
