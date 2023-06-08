@@ -55,7 +55,9 @@ async function build(distFolder, webComponentFileName) {
 async function buildAll() {
   // minified
 
- await build('./dist/apps/newsletter', 'newsletter-web-components.js');
+ await build('./dist/apps/newsletter', 'web-components.js');
+ // fs.copyFileSync( 'web-components.js', 'web-components-v1.0.js');
+
 console.log('build done');
 //makeStylesJs('/dist/apps/newsletter/styles.css', '/dist/apps/newsletter/styles.js');
   //fs.copyFileSync( 'src/test-harness/index.html', 'dist/outbox-ui/web-components/index.html');

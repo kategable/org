@@ -8,5 +8,5 @@ import { NewsLetterComponent } from  '@org/news-letter';
   imports: [NewsLetterComponent]
 })
 export class AppComponent {
-  title = 'org';
+  title = 'this is an angular element';
 }
