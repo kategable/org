@@ -1,9 +1,9 @@
 /* eslint-disable */
 export default {
-  displayName: 'newsletter-element',
+  displayName: 'news-letter',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: '../../coverage/libs/newsletter-element',
+  coverageDirectory: '../../coverage/libs/news-letter',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',

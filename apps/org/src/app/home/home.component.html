@@ -39,6 +39,11 @@
   <a class="w3-bar-item w3-button w3-padding" (click)="loadNewsletter()"
     >Newsletter</a
   >
+  <org-newsletter-root [show]="showNewsletter"></org-newsletter-root>
+
+  <ng-container *ngIf="loading; else loading">
+  </ng-container>
+  <ng-template #loading> loading newsletter component... </ng-template>
   <a href="#footer" class="w3-bar-item w3-button w3-padding">Subscribe</a>
 </nav>
 

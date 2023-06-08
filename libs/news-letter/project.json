@@ -1,16 +1,16 @@
 {
-  "name": "newsletter-element",
+  "name": "news-letter",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/newsletter-element/src",
+  "sourceRoot": "libs/news-letter/src",
   "prefix": "org",
-  "tags": [],
+  "tags": ["newsletter"],
   "projectType": "library",
   "targets": {
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/newsletter-element/jest.config.ts",
+        "jestConfig": "libs/news-letter/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
@@ -25,8 +25,8 @@
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
-          "libs/newsletter-element/**/*.ts",
-          "libs/newsletter-element/**/*.html"
+          "libs/news-letter/**/*.ts",
+          "libs/news-letter/**/*.html"
         ]
       }
     }

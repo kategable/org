@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@org/newsletter-element": ["libs/newsletter-element/src/index.ts"]
+      "@org/news-letter": ["libs/news-letter/src/index.ts"],
     }
   },
   "exclude": ["node_modules", "tmp"]

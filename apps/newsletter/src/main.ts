@@ -1,6 +1,19 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { AppModule } from './app/app.module';
 
-platformBrowserDynamic()
-  .bootstrapModule(AppModule)
-  .catch((err) => console.error(err));
+import { AppComponent } from './app/app.component';
+import { createApplication } from '@angular/platform-browser';
+import { createCustomElement } from '@angular/elements';
+(async () => {
+
+  const app = await createApplication({
+    providers: [
+      /* your global providers here */
+    ],
+  });
+
+  const appComp = createCustomElement(AppComponent, {
+    injector: app.injector,
+  });
+
+  customElements.define('org-newsletter-root', appComp);
+
+})();
