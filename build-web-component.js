@@ -62,17 +62,7 @@ async function buildNewsLetterComponent(version) {
     builtFile,
     newscript
   );
-  // fs.copyFileSync(
-  //   builtFile,
-  //   'apps/newsletter/src/web-components.js'
-  // );
   console.log('copy done');
-
-  //todo: figure out where this goes
-  // fs.writeFileSync(
-  //   'web-components.js',
-  //   `<script src="${newscriptFileName}" type="text/javascript"></script>`
-  // );
 }
 const version = '1.0';
 buildNewsLetterComponent(version);

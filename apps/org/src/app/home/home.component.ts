@@ -7,7 +7,7 @@ import { CUSTOM_ELEMENTS_SCHEMA, Component, Inject } from '@angular/core';
   imports: [CommonModule],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  schemas:[CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class HomeComponent {
   showNewsletter = false;
@@ -46,61 +46,42 @@ export class HomeComponent {
   // }
   loadNewsletter() {
     this.showNewsletter = true;
-   // this.createWebComponent();
-
+    // this.createWebComponent();
   }
 
   private createWebComponent() {
-
-
     const script = this.getScript();
 
     this.document.body.appendChild(script);
-
   }
 
-
-
   private getScript() {
-
     const script = this.document.createElement('script');
-
     script.async = false;
-
     script.defer = false;
-
     script.innerHTML = '';
-
-    script.src = 'http://localhost:52058/assets/web-component.js';
-
+    script.src = 'https://production/web-component.js';
     script.onabort = () => {
-
-      console.error('ABNORMAL TERMINATION while loading the  web component script');
-
+      console.error(
+        'ABNORMAL TERMINATION while loading the web component script'
+      );
     };
 
     script.onerror = (event: Event | string) => {
+      const eventString: string =
+        typeof event === 'string' ? event : JSON.stringify(event, null, 2);
 
-      const eventString: string = typeof event === 'string' ? event : JSON.stringify(event, null, 2);
-
-      console.error('ERROR while loading the  web component script: ' + eventString);
-
+      console.error(
+        'ERROR while loading the web component script: ' + eventString
+      );
 
       this.loading = false;
-
     };
 
     script.onload = () => {
-
-
       this.loading = false;
-
     };
 
-
-
     return script;
-
   }
-
 }
