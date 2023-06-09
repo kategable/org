@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { NewsLetterComponent } from  '@org/news-letter';
 @Component({
   standalone: true,
@@ -9,4 +9,8 @@ import { NewsLetterComponent } from  '@org/news-letter';
 })
 export class AppComponent {
   title = 'this is an angular element';
+  @Input() showNewsletter = false;
+  constructor() {
+    console.log('this is an angular element');
+  }
 }

@@ -8,4 +8,5 @@
 
 -->
 <div>{{title}}</div>
-<org-news-letter></org-news-letter>
+<button (click)="showNewsletter = true">Show</button>
+<org-news-letter [show]="showNewsletter"></org-news-letter>

@@ -4,7 +4,7 @@
   "license": "MIT",
   "nx": {},
   "scripts": {
-    "web": "node apps/newsletter/build-web-component.js"
+    "web": "node build-web-component.js"
   },
   "private": true,
   "dependencies": {

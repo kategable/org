@@ -17,7 +17,7 @@
         "tsConfig": "apps/org/tsconfig.app.json",
         "assets": ["apps/org/src/favicon.ico", "apps/org/src/assets"],
         "styles": ["apps/org/src/styles.scss"],
-        "scripts": ["apps/org/src/web-components.js"]
+        "scripts": []
       },
       "configurations": {
         "production": {

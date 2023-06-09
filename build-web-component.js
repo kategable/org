@@ -34,14 +34,10 @@ async function build(distFolder, webComponentFileName) {
 
   const files = [
     `${distFolder}/styles.js`,
-
     `${distFolder}/runtime.js`,
-
     `${distFolder}/polyfills.js`,
-
     `${distFolder}/main.js`,
-
-   // `${distFolder}/scripts.js`,
+    `${distFolder}/scripts.js`,
   ];
 
   fs.ensureDirSync('dist/apps/newsletter/web-components');
@@ -52,23 +48,32 @@ async function build(distFolder, webComponentFileName) {
   );
 }
 
-async function buildAll() {
+async function buildNewsLetterComponent(version) {
   // minified
+  const fileName = 'web-components';
+  const builtFilePath = 'dist/apps/newsletter/web-components/';
+  const builtFile = `${builtFilePath}${fileName}.js`;
+  const newscriptPath = `apps/newsletter/src/`;
+  const newscriptFileName = `${fileName}-v${version}`;
+  const newscript = `${newscriptPath}${newscriptFileName}.js`;
+  await build('./dist/apps/newsletter', fileName +'.js');
+  console.log('build done');
 
- await build('./dist/apps/newsletter', 'web-components.js');
- // fs.copyFileSync( 'web-components.js', 'web-components-v1.0.js');
+  fs.copyFileSync(
+    builtFile,
+    newscript
+  );
+  fs.copyFileSync(
+    newscript,
+    'apps/newsletter/src/web-components.js'
+  );
+  console.log('copy done');
 
-console.log('build done');
-//makeStylesJs('/dist/apps/newsletter/styles.css', '/dist/apps/newsletter/styles.js');
-  //fs.copyFileSync( 'src/test-harness/index.html', 'dist/outbox-ui/web-components/index.html');
-
-  // full-size
-
-  // build('./dist/outbox-ui/debug', 'outbox-web-components-debug.js');
-
-  // copyFileSyncWithReplace( 'src/test-harness/index.html', 'dist/outbox-ui/web-components/index-debug.html',
-
-  //                 'outbox-web-components.js', 'outbox-web-components-debug.js');
+  //todo: figure out where this goes
+  // fs.writeFileSync(
+  //   'web-components.js',
+  //   `<script src="${newscriptFileName}" type="text/javascript"></script>`
+  // );
 }
-
- buildAll();
+const version = '1.0';
+buildNewsLetterComponent(version);
