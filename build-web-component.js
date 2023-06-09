@@ -37,7 +37,6 @@ async function build(distFolder, webComponentFileName) {
     `${distFolder}/runtime.js`,
     `${distFolder}/polyfills.js`,
     `${distFolder}/main.js`,
-    `${distFolder}/scripts.js`,
   ];
 
   fs.ensureDirSync('dist/apps/newsletter/web-components');
@@ -53,7 +52,7 @@ async function buildNewsLetterComponent(version) {
   const fileName = 'web-components';
   const builtFilePath = 'dist/apps/newsletter/web-components/';
   const builtFile = `${builtFilePath}${fileName}.js`;
-  const newscriptPath = `apps/newsletter/src/`;
+  const newscriptPath = `dist/apps/newsletter/web-components/`;
   const newscriptFileName = `${fileName}-v${version}`;
   const newscript = `${newscriptPath}${newscriptFileName}.js`;
   await build('./dist/apps/newsletter', fileName +'.js');
@@ -63,10 +62,10 @@ async function buildNewsLetterComponent(version) {
     builtFile,
     newscript
   );
-  fs.copyFileSync(
-    newscript,
-    'apps/newsletter/src/web-components.js'
-  );
+  // fs.copyFileSync(
+  //   builtFile,
+  //   'apps/newsletter/src/web-components.js'
+  // );
   console.log('copy done');
 
   //todo: figure out where this goes

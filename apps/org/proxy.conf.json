@@ -1,0 +1,6 @@
+{
+  "web-components.js": {
+    "target": "http://localhost:56037/web-components/web-components.js",
+    "secure": false
+  }
+}

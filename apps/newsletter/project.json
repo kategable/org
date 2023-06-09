@@ -20,7 +20,7 @@
           "apps/newsletter/src/assets"
         ],
         "styles": ["apps/newsletter/src/styles.scss"],
-        "scripts": ["web-components.js"]
+        "scripts": []
       },
       "configurations": {
         "production": {

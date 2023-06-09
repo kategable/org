@@ -8,5 +8,5 @@
 
 -->
 <div>{{title}}</div>
-<button (click)="showNewsletter = true">Show</button>
+<button (click)="showNewsletter = !showNewsletter">Show</button>
 <org-news-letter [show]="showNewsletter"></org-news-letter>
