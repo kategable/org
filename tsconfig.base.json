@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@org/news-letter": ["libs/news-letter/src/index.ts"],
+      "@org/global-store": ["libs/global-store/src/index.ts"],
+      "@org/news-letter": ["libs/news-letter/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
