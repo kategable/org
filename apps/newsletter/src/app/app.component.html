@@ -7,6 +7,8 @@
   create a bootstrap for the newsletter web component so that integration did not know about the version
 
 -->
-<div>{{title}}</div>
-<button (click)="showNewsletter = !showNewsletter">Show</button>
-<org-news-letter [show]="showNewsletter"></org-news-letter>
+<div>{{ title }}</div>
+<a class="w3-bar-item w3-button w3-padding" (click)="show = !show"
+  >Newsletter</a
+>
+<org-news-letter [show]="show"></org-news-letter>

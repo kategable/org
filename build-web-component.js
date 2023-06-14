@@ -62,6 +62,7 @@ async function buildNewsLetterComponent(version) {
     builtFile,
     newscript
   );
+
   console.log('copy done');
 }
 const version = '1.0';

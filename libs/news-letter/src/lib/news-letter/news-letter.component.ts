@@ -10,5 +10,5 @@ import { CommonModule } from '@angular/common';
 })
 export class NewsLetterComponent {
 
-  @Input() show = true;
+  @Input() show = false;
 }

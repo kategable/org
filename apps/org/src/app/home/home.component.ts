@@ -46,7 +46,7 @@ export class HomeComponent {
   // }
   loadNewsletter() {
     this.showNewsletter = true;
-    // this.createWebComponent();
+     this.createWebComponent();
   }
 
   private createWebComponent() {

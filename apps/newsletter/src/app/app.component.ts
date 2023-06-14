@@ -9,8 +9,9 @@ import { NewsLetterComponent } from  '@org/news-letter';
 })
 export class AppComponent {
   title = 'this is an angular element';
-  @Input() showNewsletter = false;
+  @Input() show = false;
+  private _showNewsletter = false;
   constructor() {
-    console.log('this is an angular element');
+    console.log('this is an angular element', this.show);
   }
 }
