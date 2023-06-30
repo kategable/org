@@ -36,17 +36,10 @@
     <a href="#" class="w3-bar-item w3-button">Blazers</a>
     <a href="#" class="w3-bar-item w3-button">Shoes</a>
   </div>
-  <a class="w3-bar-item w3-button w3-padding" (click)="loadNewsletter()"
-    >Newsletter</a
-  >
 
 
-
-
-
-  
   <ng-container *ngIf="loading; else loading">
-    <org-newsletter-root [show]="true"></org-newsletter-root>
+    <org-newsletter-root [show]="showNewsletter"></org-newsletter-root>
   </ng-container>
   <ng-template #loading> loading newsletter component... </ng-template>
 
@@ -55,7 +48,7 @@
 
 
 
-  <a href="#footer" class="w3-bar-item w3-button w3-padding">Subscribe</a>
+  <!-- <a href="#footer" class="w3-bar-item w3-button w3-padding">Subscribe</a> -->
 </nav>
 
 <!-- Top menu on small screens -->
@@ -173,7 +166,7 @@
   </div>
 
   <!-- Subscribe section -->
-  <div class="w3-container w3-black w3-padding-32">
+  <!-- <div class="w3-container w3-black w3-padding-32">
     <h1>Subscribe</h1>
     <p>To get special offers and VIP treatment:</p>
     <p>
@@ -187,7 +180,7 @@
     <button type="button" class="w3-button w3-red w3-margin-bottom">
       Subscribe
     </button>
-  </div>
+  </div> -->
 
   <!-- End page content -->
 </div>

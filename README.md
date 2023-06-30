@@ -62,4 +62,4 @@ Nx comes with local caching already built-in (check your `nx.json`). On CI you m
 
 
 `npx nx run newsletter:build --configuration=production && npm run web`
-npm run web
+from dist http-server --cors
