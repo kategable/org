@@ -4,7 +4,8 @@
   "license": "MIT",
   "nx": {},
   "scripts": {
-    "web": "node build-web-component.js"
+    "web": "node build-web-component.js",
+    "start": "react-scripts start"
   },
   "private": true,
   "dependencies": {
